@@ -1,0 +1,113 @@
+header {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.shelf {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+}
+
+.book {
+    box-shadow: 5px 10px 8px rgba(129, 77, 77, 0.4);
+    height: 180px;
+    width: 100px;
+    margin: 5px;
+    background-repeat: no-repeat;
+    background-size: auto;
+   position: relative;
+   padding-bottom:140px;
+    
+}
+
+.searchBook {
+    width: 100%;
+    padding: 20px 20px 20px 60px;
+    background-image: url("../asset/search.svg");
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 1.2em;
+    font-size: 1.2em;
+    border: 0;
+    outline: none;
+}
+
+.bookShelf {
+    list-style-type: none;
+    
+    padding:0;
+    height:100vh;
+    text-align:center
+
+}
+.addButton {
+    box-shadow: 5px 10px 8px rgba(129, 77, 77, 0.4);
+    min-width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: green;
+    position: sticky;
+    bottom: 10px;
+    float: right;
+    z-index: 888;
+    border: 0;
+    margin: 10px;
+}
+
+.Library {
+    background-color: #f5f5f5;
+    height: 100vh;
+    width: 100%;
+}
+.bookStore {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+ 
+
+/*dropdown style*/
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  bottom:-140px;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-grow:1;
+  border-radius: 8px;
+}
+
+
+.dropdownContent li{
+    height:35px;
+    text-align:left;
+    padding: 6px 8px 6px 12px; 
+    
+}
+.dropdownContent li:hover{
+    background-color:#ddd;
+}
+
+.dropdownContent li:first-child{
+    border-top-left-radius: 8px;
+    border-top-right-radius:8px;
+}
+.dropdownContent li:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius:8px;
+}
+
+
+.dropdownContent a:hover {background-color: #ddd;}
+
+.book:hover .dropdownContent {display: block;}
+
+.book:hover .dropbtn {background-color: #3e8e41;}
