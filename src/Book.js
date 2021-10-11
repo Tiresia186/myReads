@@ -4,7 +4,7 @@ import Aux from "./Aux";
 import { ContactsOutlined } from "@ant-design/icons";
 
 const Book = (props) => {
-    const { cover, onShelfUpdate, id, book } = props;
+    const { cover, onShelfUpdate, id, book, handleChange} = props;
 
     return (
         <div style={{ backgroundImage: cover }} className={Styles.book}>
@@ -14,15 +14,15 @@ const Book = (props) => {
                     {" "}
                     view
                 </li>
-                <li value='CurrentlyReading'onClick={e=>onShelfUpdate(book, e.target.value)}>
+                <li onClick={(e)=>{handleChange(book.shelf, 'currentlyReading') ; onShelfUpdate(book, 'currentlyReading')}}>
                      Current Readings
                 </li >
 
-                <li value='wantToRead'>
+                <li onClick={(e)=>{handleChange(book.shelf, 'wantToRead') ; onShelfUpdate(book, 'wantToRead')}}>
                     {" "}
                     Want To Read 
                 </li>
-                <li value='read'>
+                <li onClick={(e)=>{handleChange(book.shelf, 'read') ; onShelfUpdate(book, 'read')}}>
                     {" "}
                     Read
                 </li>

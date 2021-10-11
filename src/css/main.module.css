@@ -71,6 +71,21 @@ header {
 }
  
 
+.showMessage{
+    background-color:#4BEC32;
+    padding:10px;
+    text-align:center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+.showErrorMessage{
+    background-color:red;
+    padding:10px;
+    text-align:center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
 /*dropdown style*/
 
 .dropdownContent {

@@ -4,7 +4,7 @@ import Book from './Book';
 import Styles from './css/main.module.css'
 
 const Shelf= (props)=>{
-    const {books, key, title, onShelfUpdate} = props
+    const {books, key, title, onShelfUpdate, handleChange} = props
     
     return(
         <Aux>
@@ -18,6 +18,7 @@ const Shelf= (props)=>{
                    cover={`url(${b.imageLinks.thumbnail})`}
                    onShelfUpdate={onShelfUpdate}
                    book={b}
+                   handleChange={handleChange}
                />
                 ))}
 
